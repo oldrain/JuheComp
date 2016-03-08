@@ -40,7 +40,7 @@ class JuheData
 		return $this->_getJuheData(self::ID_VTR, $paramArr, $isFromCache);
 	}
 	
-	public function getVtrCityAll($format = self::VTR_CITY_FORMAT_INDEX, $isFromCache = true)
+	public function getAllVtrCity($format = self::VTR_CITY_FORMAT_INDEX, $isFromCache = true)
 	{
 		$paramArr = array(
 				'format'=> $format,
