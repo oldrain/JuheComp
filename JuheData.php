@@ -25,6 +25,7 @@ class JuheData
 		
 	}
 	
+	// 全国车辆违章
 	public function getVtr($city, $hphm, $hpzl, $engineno, $classno, $isFromCache = true)
 	{
 		$paramArr = array(
@@ -40,6 +41,7 @@ class JuheData
 		return $this->_getJuheData(self::ID_VTR, $paramArr, $isFromCache);
 	}
 	
+	// 全国车辆违章城市列表
 	public function getAllVtrCity($format = self::VTR_CITY_FORMAT_INDEX, $isFromCache = true)
 	{
 		$paramArr = array(
@@ -51,6 +53,7 @@ class JuheData
 		return $this->_getJuheData(self::ID_VTR_CITY, $paramArr, $isFromCache);
 	}
 	
+	// 天气预报
 	public function getWeather($city, $isFromCache = true)
 	{
 		$paramArr = array(
@@ -62,6 +65,7 @@ class JuheData
 		return $this->_getJuheData(self::ID_WEATHER, $paramArr, $isFromCache);
 	}
 	
+	// 违章高发地
 	public function getHivrt($lat, $lon, $r = self::HIVTR_RADIUS_DEFAULT, $isFromCache = true)
 	{
 		if (!Functions::isLegalLatitude($lat) || !Functions::isLegalLongitude($lon)) {
